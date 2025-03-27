@@ -1,5 +1,5 @@
 import React from "react";
-import {Menu} from "./model/restaurant.ts";
+import {Menu} from "../model/restaurant.ts";
 
 // extends 는 Menu를 상속받는다는 의미
 // interface 로 사용하는 방법
@@ -22,7 +22,7 @@ interface OwnProps extends Menu {
 //     showBestMenuName(name:string):string
 // }
 
-const BestMenu:React.FC<OwnProps> = ({name, category, showBestMenuName}) => {
+const BestMenu:React.FC<OwnProps> = ({name}) => {
     return <div>{name}</div>
 }
 

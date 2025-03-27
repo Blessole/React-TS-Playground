@@ -1,12 +1,17 @@
 import React from 'react';
 
-const Box:React.FC = (props) => {
+interface OwnProps {
+    name:string,
+    num:number
+}
+
+const Box:React.FC<OwnProps> = ({name, num}) => {
     const clickMe = () => {
        alert('clicked');
     }
     return (
         <div className="box">
-            Box {props.num} {props.name}
+            Box {num} {name}
             <button onClick={clickMe}>Click</button>
         </div>
     )

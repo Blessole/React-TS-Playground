@@ -1,5 +1,5 @@
 import React from "react";
-import {Address, Restaurant} from "./model/restaurant.ts";
+import {Address, Restaurant} from "../model/restaurant.ts";
 
 interface OwnProps {
     info: Restaurant
