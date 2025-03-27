@@ -4,6 +4,8 @@ import Store from "./Store.tsx";
 import {Address, Restaurant} from "./model/restaurant";
 import BestMenu from "./BestMenu.tsx";
 
+import Box from "./Box.tsx";
+
 let data:Restaurant = {
     name: 'sol restaurant',
     category: 'western',
@@ -34,10 +36,17 @@ const App:React.FC = () => {
     }
   return (
       <div className="App">
-      <Store info={myRestaurant} changeAddress={changeAddress}/>
+          <Store info={myRestaurant} changeAddress={changeAddress}/>
           <BestMenu name="불고기피자" category="피자" showBestMenuName={showBestMenuName} />
+
+          <Box name="Sol" num={1} />
+          <Box name="Jimin" num={2} />
+          <Box name="JHope" num={3} />
+          <Box name="V" num={4} />
       </div>
+
   )
 }
 
 export default App
+xssssss

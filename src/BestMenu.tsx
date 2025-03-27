@@ -8,19 +8,19 @@ interface OwnProps extends Menu {
 }
 
 // type 으로 사용하는 방법
-type OwnProps = Menu & {
-    showBestMenuName(name:string):string
-}
+// type OwnProps = Menu & {
+//     showBestMenuName(name:string):string
+// }
 
 // omit 은 Menu에서 price를 제외한 나머지를 사용한다는 의미
-interface OwnProps extends Omit<Menu,'price'> {
-    showBestMenuName(name:string):string
-}
+// interface OwnProps extends Omit<Menu,'price'> {
+//     showBestMenuName(name:string):string
+// }
 
 // pick 은 Menu에서 name만 사용한다는 의미
-interface OwnProps extends Pick<Menu,'name'> {
-    showBestMenuName(name:string):string
-}
+// interface OwnProps extends Pick<Menu,'name'> {
+//     showBestMenuName(name:string):string
+// }
 
 const BestMenu:React.FC<OwnProps> = ({name, category, showBestMenuName}) => {
     return <div>{name}</div>
