@@ -34,6 +34,16 @@ const App:React.FC = () => {
     const showBestMenuName = (name:string) => {
         return name;
     }
+
+    let count:number = 0;
+    const [count2, setCount2] = useState<number>(0);
+    const increase = () => {
+        count = count + 1;
+        setCount2(count2 + 1);
+        console.log('state count : ', count2);
+        // state count 가 한박자 늦음 -> 함수 끝날 때 까지 기다렸다가 UI 업데이트를 진행
+    }
+
   return (
       <div className="App">
           <Store info={myRestaurant} changeAddress={changeAddress}/>
@@ -43,10 +53,13 @@ const App:React.FC = () => {
           <Box name="Jimin" num={2} />
           <Box name="JHope" num={3} />
           <Box name="V" num={4} />
+
+          <div>{count}</div>
+          <div>state: {count2}</div>
+          <button onClick={increase}>증가</button>
       </div>
 
   )
 }
 
 export default App
-xssssss
